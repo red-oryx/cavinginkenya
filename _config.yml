@@ -1,0 +1,13 @@
+title: Caving In Kenya
+description: The Cave Exploration Group of East Africa
+url: "https://cavinginkenya.com"
+baseurl: ""
+domain: cavinginkenya.com
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
