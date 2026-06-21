@@ -1,0 +1,130 @@
+.lightbox-enabled .galleryInnerImageHolder a {
+	cursor: zoom-in;
+	display: block;
+}
+
+.lightbox-enabled .galleryImage {
+	transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.lightbox-enabled .galleryInnerImageHolder a:hover .galleryImage {
+	opacity: 0.82;
+	transform: scale(1.03);
+}
+
+.site-lightbox {
+	align-items: center;
+	background: rgba(8, 8, 8, 0.92);
+	box-sizing: border-box;
+	display: none;
+	inset: 0;
+	justify-content: center;
+	padding: 32px;
+	position: fixed;
+	z-index: 10000;
+}
+
+.site-lightbox.is-open {
+	display: flex;
+}
+
+.site-lightbox__figure {
+	margin: 0;
+	max-height: 100%;
+	max-width: 100%;
+	text-align: center;
+}
+
+.site-lightbox__image {
+	border: 1px solid rgba(255, 255, 255, 0.22);
+	box-shadow: 0 18px 60px rgba(0, 0, 0, 0.65);
+	display: block;
+	max-height: calc(100vh - 112px);
+	max-width: calc(100vw - 96px);
+	object-fit: contain;
+}
+
+.site-lightbox__caption {
+	color: #d7d7d7;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 14px;
+	margin-top: 12px;
+	min-height: 18px;
+}
+
+.site-lightbox__button {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.45);
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	border-radius: 999px;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	font-size: 34px;
+	height: 48px;
+	justify-content: center;
+	line-height: 1;
+	position: absolute;
+	transition: background 160ms ease, border-color 160ms ease;
+	width: 48px;
+}
+
+.site-lightbox__button:hover,
+.site-lightbox__button:focus {
+	background: rgba(0, 0, 0, 0.75);
+	border-color: rgba(255, 255, 255, 0.55);
+	outline: none;
+}
+
+.site-lightbox__close {
+	font-size: 36px;
+	right: 24px;
+	top: 24px;
+}
+
+.site-lightbox__prev,
+.site-lightbox__next {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.site-lightbox__prev {
+	left: 24px;
+}
+
+.site-lightbox__next {
+	right: 24px;
+}
+
+body.lightbox-open {
+	overflow: hidden;
+}
+
+@media (max-width: 700px) {
+	.site-lightbox {
+		padding: 16px;
+	}
+
+	.site-lightbox__image {
+		max-height: calc(100vh - 104px);
+		max-width: calc(100vw - 32px);
+	}
+
+	.site-lightbox__button {
+		height: 42px;
+		width: 42px;
+	}
+
+	.site-lightbox__close {
+		right: 12px;
+		top: 12px;
+	}
+
+	.site-lightbox__prev {
+		left: 12px;
+	}
+
+	.site-lightbox__next {
+		right: 12px;
+	}
+}
