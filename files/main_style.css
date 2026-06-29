@@ -153,3 +153,136 @@ div.paragraph ol, div.paragraph ol li { list-style: decimal outside !important; 
 	height: 22px;
 	width: 22px;
 }
+
+.application-form {
+	background: rgba(0, 0, 0, 0.18);
+	border: 1px solid #333;
+	padding: 24px;
+}
+
+.application-form [hidden] {
+	display: none !important;
+}
+
+.application-form__intro {
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.application-form__section {
+	border: 0;
+	border-top: 1px solid #333;
+	margin: 0 0 24px;
+	padding: 22px 0 0;
+}
+
+.application-form__section legend {
+	color: #ccc;
+	font-family: "Metamorphous", serif;
+	font-size: 18px;
+	padding-right: 12px;
+}
+
+.application-form__grid {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.application-form__field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.application-form__field--full {
+	grid-column: 1 / -1;
+}
+
+.application-form label,
+.application-form__label {
+	color: #c0c0c0;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 15px;
+	line-height: 1.4;
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+	background: #0d0d0d;
+	border: 1px solid #333;
+	border-radius: 3px;
+	box-sizing: border-box;
+	color: #d7d7d7;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 15px;
+	padding: 9px 10px;
+	width: 100%;
+}
+
+.application-form textarea {
+	min-height: 96px;
+	resize: vertical;
+}
+
+.application-form__options {
+	display: grid;
+	gap: 10px;
+}
+
+.application-form__option {
+	align-items: flex-start;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: auto 1fr;
+}
+
+.application-form__option input {
+	margin-top: 4px;
+	width: auto;
+}
+
+.application-form__agreement {
+	align-items: flex-start;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: auto 1fr;
+}
+
+.application-form__agreement input {
+	margin-top: 5px;
+	width: auto;
+}
+
+.application-form__actions {
+	text-align: center;
+}
+
+.application-form__actions button:disabled {
+	cursor: not-allowed;
+	filter: grayscale(1);
+	opacity: 0.45;
+}
+
+.application-form__note {
+	color: #888;
+	font-size: 13px;
+	margin-top: 12px;
+}
+
+.application-form__required {
+	color: #d05a4f;
+	font-weight: bold;
+	margin-left: 3px;
+}
+
+@media (max-width: 700px) {
+	.application-form {
+		padding: 16px;
+	}
+
+	.application-form__grid {
+		grid-template-columns: 1fr;
+	}
+}
